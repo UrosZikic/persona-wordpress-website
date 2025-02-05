@@ -15,5 +15,19 @@ function support_function()
 }
 ;
 
+function custom_posttype_generator()
+{
+  register_post_type('projects', array(
+    'public' => true,
+    'has_archive' => true,
+    'show_in_rest' => true,
+    'supports' => array('title', 'editor', 'author', 'excerpt'),
+    'menu_icon' => 'dashicons-admin-customizer',
+    'labels' => array('name' => 'Projects')
+  ));
+}
+;
+
 add_action('wp_enqueue_scripts', 'main_function');
 add_action('after_setup_theme', 'support_function');
+add_action('init', 'custom_posttype_generator');
