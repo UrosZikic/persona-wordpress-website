@@ -4,14 +4,15 @@
   while (have_posts()) {
     the_post();
     ?>
-    <div class="main-project-item flex-default gap-xs">
-      <img src="<?php echo get_field('project_image') ?>">
+    <a class="main-project-item flex-default gap-xs" href="<?php the_permalink(); ?>">
+      <img src="<?php echo get_field('project_image')['url'] ?>" alt="<?php echo $alt = get_field('project_image')['alt'];
+         ?>">
+
       <div class="flex-default flex-column flex-justify-center ">
-        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <?php the_title(); ?>
         <p><?php the_excerpt() ?></p>
       </div>
-
-    </div>
+    </a>
     <?php
   }
   ?>

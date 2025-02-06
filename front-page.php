@@ -13,8 +13,7 @@
       <a href="<?php echo get_theme_file_uri('/zikic-resume.pdf') ?>">Get my resume</a>
     </div>
     <div class="main-image"
-      style="background-image: url(<?php echo get_theme_file_uri('/screenshot.jpg') ?>);  background-size: cover;"
-      width="300" height="300">
+      style="background-image: url(<?php echo get_theme_file_uri('/screenshot.jpg') ?>);  background-size: cover;">
     </div>
   </section>
 </main>

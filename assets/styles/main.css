@@ -4,7 +4,8 @@
 body {
   background-color: #111821;
 }
-p {
+p,
+li {
   color: white;
 }
 /* flexbox */
@@ -20,6 +21,9 @@ p {
 }
 .flex-justify-center {
   justify-content: center;
+}
+.flex-align-center {
+  align-items: center;
 }
 .gap-m {
   gap: 20px;
@@ -76,6 +80,8 @@ p {
 }
 .main-image {
   transform: rotate(-15deg);
+  width: 300px;
+  height: 300px;
 }
 
 /* about page */
@@ -100,6 +106,121 @@ p {
   border: none;
 }
 
+/* single projects */
+.single-projects main {
+  margin: 100px auto;
+}
+.postid-25 footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+/* contact styles */
+.contact-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 10rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  transition: all 1s ease-in;
+  position: relative;
+}
+.contact-container img {
+  position: absolute;
+  right: 0;
+  width: 35%;
+  height: 100%;
+  object-fit: cover;
+}
+.form-container {
+  width: 100%;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.name_mail_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.name_mail_container div {
+  display: flex;
+  flex-direction: column;
+}
+.name_mail_container div input,
+textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 8px;
+  border-radius: 10px;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background-color: white;
+  color: #45260a;
+}
+textarea {
+  font-size: 18px;
+  resize: none;
+}
+label {
+  font-size: 20px;
+  color: white;
+}
+
+.form-container button {
+  width: 100%;
+  max-width: 16rem;
+  padding: 5px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  border-radius: 10px;
+  color: #45260a;
+  background-color: white;
+}
+.form-container h2 {
+  color: white !important;
+  font-size: 30px;
+}
+.contact-container p {
+  font-size: 20px;
+  color: white;
+}
+.form-notification {
+  color: #d9480f !important;
+}
+@media only screen and (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  .contact-container img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .name_mail_container {
+    grid-template-columns: 1fr;
+  }
+  .text_teachers_holder p {
+    font-size: 1.5rem;
+  }
+  .offer_2 p {
+    font-size: 1.5rem !important;
+  }
+  .hero {
+    margin-bottom: 0 !important;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .main-project {
     grid-template-columns: 1fr;
@@ -121,11 +242,28 @@ p {
     height: 250px;
   }
 }
+@media only screen and (max-width: 1050px) {
+  .single-projects main {
+    flex-direction: column;
+  }
+  .project-image-2 {
+    align-self: center;
+  }
+  .main-about p {
+    font-size: 18px;
+  }
+  .postid-25 footer {
+    position: static;
+  }
+}
 
 @media only screen and (max-width: 650px) {
   .main-project p,
   .main-project a {
     font-size: 18px;
+  }
+  .main-about p {
+    font-size: 15px;
   }
 }
 @media only screen and (max-width: 550px) {
@@ -134,5 +272,26 @@ p {
   }
   .main-project-item img {
     align-self: center;
+  }
+  .single-projects p,
+  .single-projects li {
+    font-size: 15px;
+  }
+  .project-image-1,
+  .project-image-2 {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .main-about {
+    padding: 10px;
+  }
+  .main a {
+    padding: 5px 1px;
+    width: 300px;
+    justify-self: center;
+  }
+  .main a img {
+    width: 100%;
   }
 }
