@@ -1,1 +1,4 @@
 - This is my personal wordpress website.
+- I've created this website to showcase my wordpress knowledge.
+- This website utilizes wordpress basics: theme customization + plugin development
+- I've used Advanced Custom Fields in the development of the project.
